@@ -1,0 +1,74 @@
+<ion-header>
+
+    <ion-navbar no-border-bottom color="primary">
+      <ion-title>Criptomonedas</ion-title>
+    </ion-navbar>
+
+  </ion-header>
+    
+  <ion-content>
+
+    <ion-item>
+        <ion-label>Selecciona una criptomoneda</ion-label>
+        <select-searchable
+              item-content
+              [(ngModel)]="moneda"
+              [items]="infoMonedas"
+              itemValueField="id"
+              itemTextField="nombre"
+              [canSearch]="true"
+              (onSelect)="botonVisible()"
+              (onChange)="monedaSeleccionada($event)"
+              [shouldStoreItemValue]="true">
+        </select-searchable>
+    </ion-item>
+
+
+
+    <ion-list radio-group>
+        <ion-list-header>
+          Ver precio en:
+        </ion-list-header>
+    
+        <ion-item>
+          <ion-label>Euros</ion-label>
+          <ion-radio (ionSelect)="currency('EUR')"></ion-radio>
+        </ion-item>
+    
+        <ion-item>
+          <ion-label>Dólares</ion-label>
+          <ion-radio (ionSelect)="currency('USD')"></ion-radio>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>Dólares australianos</ion-label>
+            <ion-radio (ionSelect)="currency('AUD')"></ion-radio>
+          </ion-item>
+
+        <ion-item>
+            <ion-label>Dólares neozelandeses</ion-label>
+            <ion-radio (ionSelect)="currency('NZD')"></ion-radio>
+        </ion-item>
+    
+        <ion-item>
+            <ion-label>Libras esterlinas</ion-label>
+            <ion-radio (ionSelect)="currency('GBP')"></ion-radio>
+          </ion-item>
+
+              
+        <ion-item>
+            <ion-label>Wones</ion-label>
+            <ion-radio (ionSelect)="currency('KRW')"></ion-radio>
+          </ion-item>
+
+        <ion-item>
+          <ion-label>Yenes</ion-label>
+          <ion-radio (ionSelect)="currency('JPY')"></ion-radio>
+        </ion-item>
+    </ion-list>
+        <button ion-button block (click)="verPrecio()">
+            Ver precio
+        </button>
+  </ion-content>
+
+  
