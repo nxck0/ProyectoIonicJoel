@@ -17,5 +17,12 @@
         </div>
     </ion-list>
 
-
+    <ion-refresher slot="fixed" (ionRefresh)="refrescar($event)">
+            <ion-refresher-content
+              pullingIcon="arrow-dropdown"
+              pullingText="Desliza para recargar"
+              refreshingSpinner="circles"
+              refreshingText="Recargando...">
+            </ion-refresher-content>
+    </ion-refresher>
 </ion-content>

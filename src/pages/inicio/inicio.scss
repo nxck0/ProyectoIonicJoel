@@ -1,0 +1,32 @@
+page-inicio {
+
+}
+.animacion{
+    text-align: center;
+    padding: 26% 30%;
+    font-weight: bold;
+    opacity: 0;
+    animation-name: topFadeOut;
+    animation-duration: 5s;
+    color: black;
+    font-size: 4.4rem;
+}
+
+@keyframes topFadeOut {
+    0% {
+      position: absolute;
+      top: -3rem;
+      opacity: 0;
+    }
+  
+    75% {
+      position: absolute;
+      top: 25%;
+      opacity: 1;
+    }
+  
+    100% {
+      opacity: 0;
+    }
+  }
+  

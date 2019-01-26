@@ -9,12 +9,14 @@ import { HomePage } from '../pages/home/home';
 import { ProveedorProvider } from '../providers/proveedor/proveedor';
 import { SelectSearchableModule } from 'ionic-select-searchable';
 import { VerPrecioPage } from '../pages/ver-precio/ver-precio';
+import { InicioPage } from '../pages/inicio/inicio';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    VerPrecioPage
+    VerPrecioPage,
+    InicioPage
   ],
   imports: [
     BrowserModule,
@@ -26,7 +28,8 @@ import { VerPrecioPage } from '../pages/ver-precio/ver-precio';
   entryComponents: [
     MyApp,
     HomePage,
-    VerPrecioPage
+    VerPrecioPage,
+    InicioPage
   ],
   providers: [
     StatusBar,

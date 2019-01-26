@@ -14,6 +14,7 @@ export class VerPrecioPage {
   }
 
   
+  
   public monedas: object;
 
 
@@ -35,6 +36,13 @@ export class VerPrecioPage {
         });
         }
     );
+}
+
+refrescar(event) {
+  setTimeout(() => {
+    this.navCtrl.pop();
+    this.navCtrl.push(VerPrecioPage,{crypto:this.Crypto,currency:this.Currency});
+  }, 1000);
 }
 
 
